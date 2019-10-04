@@ -1,0 +1,26 @@
+.choice{
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 30%;
+    background-color:rgb(247, 244, 240);
+    color :red;
+    text-align: center;
+}
+.heading{
+    text-align: center;
+    background-color: brown;
+}
+#start{
+    margin-top: 35px;
+    padding: 15px;
+    font-size: 20px;
+}
+body{
+    background-image: url("abstract-yellow.jpg");
+}
+#game{
+    font-weight: 200;
+    font-size: 20px;
+}
