@@ -37,6 +37,19 @@ $(document).ready(function(){
             correctAnswer : "Odie"
         }
     ];
+    var funImages =[
+        "./assets/images/giphy.gif",
+        "./assets/images/giphy(1).gif",
+        "./assets/images/giphy(2).gif",
+        
+    ];
+    var sadImages =[
+        "./assets/images/giphy(3).gif",
+        "./assets/images/giphy(4).gif",
+        "./assets/images/giphy(5).gif",
+   
+    ];
+
     function nextQuestion(){
         console.log("nextQuestion");
         clockRunning = false;
@@ -45,10 +58,11 @@ $(document).ready(function(){
         
         if ((quizQuestions.length-1) === currentQuestion) {
             isQuestionOver = true;
+            console.log("game is over!")
         }
         if (isQuestionOver){
             console.log("isQuestionOver " + isQuestionOver);
-         // displayResult();
+          displayResult();
             timeUp();
         }
         else {
@@ -103,20 +117,24 @@ function loadChoices(choices){
 
 $(document).on('click','.choice',function(){
     console.log("document on click");
-
+    clearInterval(timer);
     if (!clockRunning) {
         clockRunning = true;
     }
-   var selectedAnswer = $(this).attr('data-answer');
-   
+   const selectedAnswer = $(this).attr('data-answer');
+   console.log("clicked")
    const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
    if (correctAnswer === selectedAnswer){
        score++;
-       console.log(wins)
+     //  preloadImage('win');
+       nextQuestion();
+       console.log("wins")
    } else{
        lost++;
+      // preloadImage('lost')
+       nextQuestion();
    }
-    loadQuestion();
+   loadQuestion();
 });
 //loadQuestion();
 
@@ -128,17 +146,36 @@ $("#start").click(function(){
     loadQuestion();
 
 });
-$("#submit").click(function(){
-    console.log("submit click");
 
-    timeUp();
-    gameOver();
-    
-})
-function gameOver(){
-    var lastQuestion= question.length;
+function displayResult(){
+    var result =
+ '<p> You get'  +  score  + 'questions right</p>'
+ '<p> You missed'  +  lost  + 'questions right</p>'
+ '<p> Total questions'  +  quizQuestions.length  + 'questions right</p>'
+ '<button btn btn-success>Reset Game</button>';
 
-
+ $("#game").html(result);
+}
+$(document).on('click', '.btn',function(){
+    counter = 10;
+    currentQuestion = 0;
+    score = 0;
+    lost = 0;
+    timer = null; 
+    loadQuestion();
+});
+function randomImage(images){
+    var random = Math.floor(Math.random() *images.length);
+    var radomImage  = images[random];
+    return randomImage;
+}
+function preloadImage(){
+    var correctAnswer = quizQuestions[currentQuestion].correctAnswer;
+    if (status ===win){
+    $("#game").html(randomImage(funImages));
+    }else{
+$("#game").html(randomImage(sadImages));
+    }
 }
 
 })
