@@ -38,15 +38,15 @@ $(document).ready(function(){
         }
     ];
     var funImages =[
-        "./assets/images/giphy.gif",
-        "./assets/images/giphy (1).gif",
-        "./assets/images/giphy (2).gif",
+        "./assets/images/happy.gif",
+        "./assets/images/award.gif",
+        "./assets/images/fireworks.gif",
         
     ];
     var sadImages =[
-        "./assets/images/giphy (3).gif",
-        "./assets/images/giphy (4).gif",
-        "./assets/images/giphy (5).gif",
+        "./assets/images/nogood.gif",
+        "./assets/images/wrong.gif",
+        "./assets/images/sorry.gif",
    
     ];
 
