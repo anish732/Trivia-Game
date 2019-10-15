@@ -1,9 +1,10 @@
 ### Trivia Game:
 
-After each right answer 
+### After each right answer 
+
 ![](assets/images/award.gif)
 
-Wrong answer
+### Wrong answer
 ![](assets/images/sorry.gif)
 
 
