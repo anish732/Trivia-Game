@@ -1,31 +1,33 @@
-.choice{
-    border: 1px solid lightgrey;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 30%;
-    color :red;
-    text-align: center;
+.choice {
+  border: 1px solid lightgrey;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 30%;
+  color: red;
+  text-align: center;
 }
-.heading{
-    text-align: center;
-    background-color: brown;
+.heading {
+  text-align: center;
+  background-color: brown;
 }
-#start{
-    margin-top: 35px;
-    padding: 15px;
-    font-size: 20px;
+#start {
+  margin-top: 35px;
+  padding: 15px;
+  font-size: 20px;
 }
-body{
-    background-image: url("abstract-yellow.jpg");
+body {
+  background-image: url("abstract-yellow.jpg");
 }
-#game{
-    font-weight: 250;
-    font-size: 25px;
-    color:red;
-    background-color: blanchedalmond;
+#game {
+  font-weight: 250;
+  font-size: 25px;
+  color: red;
+  background-image: linear-gradient(to right bottom, #fbdb89, #fdfbfb);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-#submit{
-    padding: 10px;
-    font-size: 20px;
+#submit {
+  padding: 10px;
+  font-size: 20px;
 }
